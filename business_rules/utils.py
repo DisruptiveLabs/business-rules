@@ -194,7 +194,7 @@ def validate_rule_data(variables, actions, rule):
         """
         Check all input actions contain valid names and parameters for defined actions
         """
-        if type(input_actions) is not list:
+        if not isinstance(input_actions, list):
             raise AssertionError('"actions" key must be a list')
         for action in input_actions:
             method = getattr(actions, action.get('name'), None)
@@ -204,7 +204,7 @@ def validate_rule_data(variables, actions, rule):
     rule_schema = export_rule_data(variables, actions)
     validate_root_keys(rule)
     conditions = rule.get('conditions', None)
-    if conditions is not None and type(conditions) is not dict:
+    if conditions is not None and not isinstance(conditions, dict):
         raise AssertionError('"conditions" must be a dictionary')
     validate_conditions(conditions, rule_schema)
     validate_actions(rule.get('actions'))
