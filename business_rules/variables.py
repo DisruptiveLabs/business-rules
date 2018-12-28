@@ -47,7 +47,7 @@ def rule_variable(field_type, label=None, options=None, params=None, public=True
 
     def wrapper(func):
         if not (type(field_type) == type and issubclass(field_type, BaseType)):
-            raise AssertionError("{0} is not instance of BaseType in" \
+            raise AssertionError("{0} is not instance of BaseType in"
                                  " rule_variable field_type".format(field_type))
 
         params_wrapper = utils.params_dict_to_list(params)

@@ -89,9 +89,9 @@ def test_export_rule_data():
                     'name': 'baz',
                     'label': 'Baz',
                     'options': [
-                         {'label': 'Chose Me', 'name': 'chose_me'},
-                         {'label': 'Or Me', 'name': 'or_me'}
-                     ]
+                        {'label': 'Chose Me', 'name': 'chose_me'},
+                        {'label': 'Or Me', 'name': 'or_me'}
+                    ]
                 }
             ]
         }

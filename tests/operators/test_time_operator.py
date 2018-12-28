@@ -1,5 +1,6 @@
 from __future__ import absolute_import
-from datetime import time, datetime, timedelta
+
+from datetime import datetime, time
 
 from business_rules.operators import TimeType
 from .. import TestCase
@@ -70,4 +71,4 @@ class TimeOperatorTests(TestCase):
 
     @staticmethod
     def _relative_time(base_time, hours, minutes, seconds):
-        return time(base_time.hour+hours, base_time.minute+minutes, base_time.second+seconds)
+        return time(base_time.hour + hours, base_time.minute + minutes, base_time.second + seconds)

@@ -54,6 +54,7 @@ class ActionsClassTests(TestCase):
         """ A rule action should not have to specify paramers or label. """
 
         @rule_action()
-        def some_action(self): pass
+        def some_action(self):
+            pass
 
         self.assertTrue(some_action.is_rule_action)

@@ -1,8 +1,9 @@
 from __future__ import absolute_import
+
 import logging
 
-from business_rules.actions import *
-from business_rules.fields import *
+from business_rules.actions import BaseActions, rule_action
+from business_rules.fields import FIELD_TEXT
 
 logger = logging.getLogger(__name__)
 

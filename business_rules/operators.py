@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-import calendar
+
 import inspect
 import re
 from datetime import date, datetime, time

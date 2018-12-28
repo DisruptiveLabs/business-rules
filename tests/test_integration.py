@@ -40,10 +40,12 @@ class SomeVariables(BaseVariables):
 
 class SomeActions(BaseActions):
     @rule_action(params={"foo": FIELD_NUMERIC})
-    def some_action(self, foo): pass
+    def some_action(self, foo):
+        pass
 
     @rule_action(label="woohoo", params={"bar": FIELD_TEXT})
-    def some_other_action(self, bar): pass
+    def some_other_action(self, bar):
+        pass
 
     @rule_action(params=[
         {
@@ -55,10 +57,12 @@ class SomeActions(BaseActions):
                 {'label': 'Or Me', 'name': 'or_me'}
             ]
         }])
-    def some_select_action(self, baz): pass
+    def some_select_action(self, baz):
+        pass
 
     @rule_action()
-    def action_with_no_params(self): pass
+    def action_with_no_params(self):
+        pass
 
 
 class IntegrationTests(TestCase):
