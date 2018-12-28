@@ -1,4 +1,5 @@
 from __future__ import absolute_import
+
 import inspect
 import logging
 
@@ -230,10 +231,12 @@ def _build_variable_parameters(method, parameters, rule):
 
 
 def _build_parameters(method, parameters, extra_parameters):
-    if inspect.getargspec(method).keywords is not None:
-        method_params = extra_parameters
-    else:
-        method_params = {}
+    varkw = inspect.getfullargspec(method).varkw
+
+    method_params = {}
+
+    if varkw:
+        method_params.update({k: v for k, v in extra_parameters.items() if k in varkw})
 
     method_params.update(parameters)
 
